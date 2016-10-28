@@ -166,8 +166,9 @@ module.exports =
   createBranch: (branch) ->
     return callGit "branch #{branch}", (data) ->
       return callGit "checkout #{branch}", (data) ->
-        atomRefresh()
-        return parseDefault(data)
+          return callGit "push --set-upstream origin #{branch}", (data) ->
+              atomRefresh()
+              return parseDefault(data)
 
   deleteBranch: (branch) ->
     return callGit "branch -d #{branch}", (data) ->
