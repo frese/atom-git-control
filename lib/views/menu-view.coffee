@@ -15,6 +15,8 @@ items = [
   { id: 'rebase', menu: 'Rebase', icon: 'circuit-board', type: 'active'}
   { id: 'merge', menu: 'Merge', icon: 'merge', type: 'active'}
   { id: 'branch', menu: 'Branch', icon: 'branch', type: 'active'}
+  { id: 'stashSave', menu: 'Stash Save', icon: 'stash-save', type: 'file merging'}
+  { id: 'stashPop', menu: 'Stash Pop', icon: 'stash-pop', type: 'active'}
   { id: 'flow', menu: 'GitFlow', icon: 'flow', type: 'active', showConfig: 'git-control.showGitFlowButton'}
 ]
 
