@@ -17,11 +17,16 @@ class CommitDialog extends Dialog
         @button click: 'cancel', =>
           @i class: 'icon x'
           @span 'Cancel'
+        @input type: 'checkbox', id: 'amend', outlet: 'amendCheckbox'
+        @label 'Amend', for: 'amend'
 
   activate: ->
     @msg.val('')
     return super()
 
+  amend: ->
+      return @amendCheckbox.prop('checked')
+      
   colorLength: ->
     too_long = false
     for line, i in @msg.val().split("\n")
