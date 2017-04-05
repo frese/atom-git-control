@@ -21,8 +21,10 @@ class CommitDialog extends Dialog
         @label 'Amend', for: 'amend'
 
   activate: ->
+    super()
     @msg.val('')
-    return super()
+    @msg.focus()
+    return
 
   amend: ->
       return @amendCheckbox.prop('checked')
